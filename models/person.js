@@ -3,7 +3,7 @@ require('dotenv').config()
 const uniqueV = require('mongoose-unique-validator')
 
 const url = process.env.MONGODB_URI
-
+console.log('does this work?')
 mongoose.connect(url)
     .then(result => {
         console.log('connected to MongoDB')
