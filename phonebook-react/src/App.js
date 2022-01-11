@@ -123,7 +123,7 @@ const App = () => {
         }
         )
         .catch(error => {
-          console.log(error)
+          console.log(error.response.data)
           setlatestDelete(error.response.data)
           setTimeout(() => {
             setlatestDelete('')
