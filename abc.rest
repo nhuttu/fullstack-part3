@@ -1,0 +1,14 @@
+PUT http://localhost:3001/api/persons/61dc1e033a3213a12fcd3d6b
+Content-Type: application/json
+
+{
+    "name": "ape",
+    "number": "312"
+}
+
+###
+GET http://localhost:3001/api/persons/61dadda1c83c0466ff8cb81e
+
+###
+
+DELETE http://localhost:3001/api/persons/61dc1e033a3213a12fcd3d6b
