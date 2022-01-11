@@ -7,11 +7,10 @@ app.use(express.static('backend'))
 require('dotenv').config()
 const errorHandler = (error, request, response, next) => {
   console.error(error.message)
-  console.log(error.name)
 
   if (error.name === 'CastError') {
     return response.status(400).send({ error: 'malformatted id' })
-  } 
+  }
 
   next(error)
 }
@@ -86,9 +85,6 @@ const generateId = () => {
 }
 app.post('/api/persons', (req, res, next) => {
   const body = req.body
-  if (body.content === undefined) {
-    return res.status(400).json({ error: 'content missing' })
-  }
   if (!body.number) {
     return res.status(400).json({
       error: 'number missing'
