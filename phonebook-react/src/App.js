@@ -124,6 +124,8 @@ const App = () => {
         )
         .catch(error => {
           console.log(error.response.data)
+          console.log(error)
+          console.log(error.name)
           setlatestDelete(error.response.data)
           setTimeout(() => {
             setlatestDelete('')
