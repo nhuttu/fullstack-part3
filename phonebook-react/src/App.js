@@ -16,7 +16,7 @@ const App = () => {
     if (person === '') {
       return null
     }
-    
+
     return (
       <div className='success'>
         Added {person}
