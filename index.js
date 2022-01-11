@@ -3,7 +3,7 @@ const app = express()
 const morgan = require('morgan')
 const cors = require('cors')
 const Person = require('./models/person')
-app.use(express.static('build'))
+app.use(express.static('backend'))
 require('dotenv').config()
 const errorHandler = (error, request, response, next) => {
   console.error(error.message)
