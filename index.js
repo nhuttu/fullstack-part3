@@ -90,7 +90,7 @@ const generateId = () => {
 app.post('/api/persons', (req, res, next) => {
   const body = req.body
   if (body.content === undefined) {
-    return response.status(400).json({ error: 'content missing' })
+    return res.status(400).json({ error: 'content missing' })
   }
   if (!body.number) {
     return res.status(400).json({
