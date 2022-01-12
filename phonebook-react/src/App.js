@@ -47,7 +47,7 @@ const App = () => {
         setPersons(info)
       })
       .catch(error => {
-        console.log(latestDelete + 'poistettu jo')
+        console.log(error)
       })
   }, [])
 
@@ -68,8 +68,7 @@ const App = () => {
     const who = persons.find(p => p.id === id)
     if (window.confirm(`Delete ${who.name} ?`)) {
       console.log(`${id} deleted`)
-      backend.
-        deletion(id)
+      backend.deletion(id)
         .then(r => {
           setPersons(persons.filter(p => p.id !== id))
         })
@@ -90,8 +89,7 @@ const App = () => {
       if (window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)) {
         const who = persons.find(p => p.name === newName).id
         console.log(who)
-        backend.
-          replace(who, newPerson)
+        backend.replace(who, newPerson)
           .then(r => {
             console.log(r)
             setPersons(persons.map(p => p.name === r.name ? r : p))
@@ -107,8 +105,7 @@ const App = () => {
     }
     else {
 
-      backend.
-        create(newPerson)
+      backend.create(newPerson)
         .then(r => {
           console.log(r.data)
           setPersons(persons.concat(r.data))

@@ -3,7 +3,7 @@ const baseURL = '/api/persons'
 
 const getAll = () => {
     return axios.get(baseURL).then(response => response.data)
-} 
+}
 
 const deletion = id => {
     const request = axios.delete(`${baseURL}/${id}`)
@@ -21,4 +21,5 @@ const replace = (id, newPerson) => {
     return response.then(answ => answ.data)
 }
 
-export default {getAll, deletion, create, replace}
+// eslint-disable-next-line import/no-anonymous-default-export
+export default { getAll, deletion, create, replace }

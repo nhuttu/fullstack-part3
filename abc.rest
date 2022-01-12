@@ -1,9 +1,9 @@
-PUT http://localhost:3001/api/persons/61dc1e033a3213a12fcd3d6b
+POST https://whycantthisshitwork.herokuapp.com/api/persons/
 Content-Type: application/json
 
 {
-    "name": "ape",
-    "number": "312"
+    "name": "kikkuli",
+    "number": "55555555"
 }
 
 ###
